@@ -29,10 +29,12 @@
 	$post->category_id = $data->category_id;
 
 	// Update Post
-	if ($post->update()) {
-		echo json_encode([
-			'message' => 'Post Updated'
-		]);
+	if (!is_null($data)) {
+		if ($post->update()) {
+			echo json_encode([
+				'message' => 'Post Updated'
+			]);
+		}
 	}
 	else {
 		echo json_encode([

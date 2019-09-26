@@ -5,11 +5,11 @@
  */
 class Post
 {
-	// DB params
+	// DB Params
 	private $conn;
 	private $table = 'posts';
 
-	// Post params
+	// Post Params
 	public $id;
 	public $category_id;
 	public $category_name;

@@ -24,10 +24,12 @@
 	$post->id = $data->id;
 
 	// Delete Post
-	if ($post->delete()) {
-		echo json_encode([
-			'message' => 'Post Deleted'
-		]);
+	if (!is_null($data)) {
+		if ($post->delete()) {
+			echo json_encode([
+				'message' => 'Post Deleted'
+			]);
+		}
 	}
 	else {
 		echo json_encode([

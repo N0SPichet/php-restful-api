@@ -26,10 +26,12 @@
 	$post->category_id = $data->category_id;
 
 	// Create Post
-	if ($post->create()) {
-		echo json_encode([
-			'message' => 'Post Created'
-		]);
+	if (is_null($data)) {
+		if ($post->create()) {
+			echo json_encode([
+				'message' => 'Post Created'
+			]);
+		}
 	}
 	else {
 		echo json_encode([
