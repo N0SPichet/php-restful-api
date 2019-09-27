@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 26, 2019 at 12:43 PM
+-- Generation Time: Sep 27, 2019 at 10:07 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -68,7 +68,12 @@ INSERT INTO `posts` (`id`, `category_id`, `title`, `body`, `author`, `created_at
 (4, 2, 'my test post 2', 'my test body 2', 'alex', '2019-09-22 17:32:23'),
 (5, 2, 'my test post update', 'my test body 2', 'alex', '2019-09-22 17:37:16'),
 (6, 2, 'my test post update', 'my test body 2', 'alex', '2019-09-22 17:37:21'),
-(7, 2, 'my test post update', 'my test body 2', 'alex', '2019-09-22 17:37:57');
+(7, 2, 'my test post update', 'my test body 2', 'alex', '2019-09-22 17:37:57'),
+(10, 1, 'Test from XMLHttpRequest', 'Test from XMLHttpRequest body', 'I am', '2019-09-27 14:16:29'),
+(21, 1, 'Test from XMLHttpRequest', 'Test from XMLHttpRequest body', 'I am', '2019-09-27 14:47:32'),
+(22, 2, 'Test from fetch', 'Test from fetch body', 'I am fetch', '2019-09-27 14:47:57'),
+(23, 2, 'Test from fetch', 'Test from fetch body', 'I am fetch', '2019-09-27 15:00:16'),
+(24, 2, 'Test from axios', 'Test from axios body', 'I am axios', '2019-09-27 15:06:12');
 
 --
 -- Indexes for dumped tables
@@ -100,7 +105,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

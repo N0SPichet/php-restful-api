@@ -23,7 +23,7 @@
 	$post->name = $data->name;
 
 	// Create Category
-	if (!is_null($data)) {
+	if (isset($data)) {
 		if ($post->create()) {
 			echo json_encode([
 				'message' => 'Category Created'

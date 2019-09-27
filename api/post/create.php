@@ -20,13 +20,13 @@
 	// Get Raw Posted Data
 	$data = json_decode(file_get_contents('php://input'));
 
-	$post->title = $data->title;
-	$post->body = $data->body;
-	$post->author = $data->author;
-	$post->category_id = $data->category_id;
-
 	// Create Post
-	if (is_null($data)) {
+	if (isset($data->title) && isset($data->body) && isset($data->author) && isset($data->category_id)) {
+		$post->title = $data->title;
+		$post->body = $data->body;
+		$post->author = $data->author;
+		$post->category_id = $data->category_id;
+
 		if ($post->create()) {
 			echo json_encode([
 				'message' => 'Post Created'
