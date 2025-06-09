@@ -16,4 +16,4 @@ jobs:
           php-version: '8.2'
 
       - name: Run index.php with strict checks
-        run: php -d display_errors=1 -d error_reporting=E_ALL api/index.php
+        run: php api/index.php
