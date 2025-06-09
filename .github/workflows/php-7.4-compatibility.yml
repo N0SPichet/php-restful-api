@@ -16,4 +16,4 @@ jobs:
           php-version: '7.4'
 
       - name: Run index.php (for runtime errors)
-        run: php index.php
+        run: php api/index.php
