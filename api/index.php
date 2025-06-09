@@ -1,19 +1,4 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-$php_errormsg = 1;
-
-// make it error again
-$number++;
-echo $number;
-
-if ($pass) {
-    echo 'yes';
-} else {
-    echo 'no';
-}
-
-
-echo 'new version';
+$version = '1.0.0';
+echo 'version: ' . $version;

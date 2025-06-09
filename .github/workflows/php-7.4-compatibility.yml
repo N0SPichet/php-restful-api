@@ -15,5 +15,6 @@ jobs:
         with:
           php-version: '7.4'
 
-      - name: Run index.php (for runtime errors)
-        run: php api/index.php
+      - name: Run PHP Lint
+        run: |
+          find . -name "*.php" -not -path "./vendor/*" -print0 | xargs -0 -n1 php -l
